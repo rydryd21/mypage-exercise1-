@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta 세개는 카톡등에 보냈을 때 뜨는 미리보기 이미지, 문구 -->
+    <meta property="og:title" content="yyejin's 프로필링크 모음">
+    <meta property="og:description" content="링크트리 연습용">
+    <meta property="og:image" content="버블보블.png">
+    <script type="text/javascript" src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/free/sparta.js"></script>
+    <title>링크트리 연습용!</title>
+    <style>
+
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        * {
+            font-family: "Pretendard",serif;
+        }
+        /* 폰트설정! 이거는 어케 바꾸는건지 모르겠는디 */
+
+
+        body {
+            background-color: rgb(39, 39, 63);
+        }
+
+        .profile {
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            
+            border-radius:100%;
+            /* 구역 profile의 테두리 끝단모양설정, ~px은 끝 둥글게. 100%는 원 */
+            border : 2px solid rgb(219, 219, 219); /* 구역 profile의 테두리 설정/ 굵기, 실선, 색  */
+            
+            /* (set)구역에 이미지 삽입해주는 것, 이미지불러오기,중심맞추기,크기 딱 맞게 */
+            background-image: url('버블보블.png');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .main {
+            color: white;
+            font-size: 20px;
+
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .sub {
+            color: white;
+            font-size: 14px;
+
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+
+        .abovediv {
+            width: 500px;
+            margin: 50px auto 0px auto;
+            /* 위부터 시계방향으로 화면여백을 설정해 구역 abovediv의 위치설정. auto는 쭉 미는것. 좌우 auto설정시 가운데 정렬됨 */
+
+            /* (set) 구역abovediv 안의 내용물들을 가운데 정렬 */
+            display: flex;
+            flex-direction: column; /* column대신 low도 가능 */ 
+            justify-content: center;
+            align-items: center;
+        }
+        .abovediv > a { 
+            /* 구역 abovediv에 속해있는 a target들을 한번에 설정해주는것! */
+            width: 300px;
+            height: 50px;
+
+            background-color: rgb(219, 219, 219);
+            border-radius: 8px;
+            margin-bottom: 10px;
+
+            font-size:  14px;
+            font-weight: bold;
+            color: rgb(39, 39, 63);
+
+            display: flex;
+            flex-direction: column; /* column대신 low도 가능 */ 
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            /* a target 자체에 걸린 하이퍼링크 줄 가려줌 */
+
+            box-shadow: 3px 3px 5px 0px black;
+            /* a target의 박스그림자 설정 */
+            /* 오른쪽, 아래, 그림자길이, 선명도 색*/
+        }
+
+        .abovediv > a:hover {
+            /* rndur abovediv에 속한 a중 마우스 올린것 설정 */
+            background-color: #f2f2f2;
+            font-size: 16px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="abovediv">
+        <div class="profile"></div> <!-- 프로필 이미지 구역 설정하는거임. -->
+        <h1 class="main">지니</h1>
+        <p class="sub">링크트리 만들기 연습</p>
+
+        <a target="_blank" href="https://www.instagram.com/yyejin06/">인슷하</a>
+        <a target="_blank" href="https://drive.google.com/drive/folders/1qfOWRGsonTUaibB_uGNpAQhtmM96b5dV?usp=sharing">영남대약대 3학년 1학기</a>
+        <a target="_blank" href="https://spartacodingclub.kr/online/myprofile">스파르타 코딩클럽</a>
+        <!-- <a targe="_blank" href="링크">겉보기이름</a> 가 링크넣기 인듯!!!!! -->
+
+    </div>    
+
+</body>
+</html>
